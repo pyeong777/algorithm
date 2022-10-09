@@ -7,7 +7,7 @@ const solution = (a, b, c, d, e, f, g) => {
 
     answer = `${sum} ${minValue}`
 
-    return answer
+    return answer;
 };
 
 console.log(solution(12, 77, 38, 41, 53, 92, 85));
