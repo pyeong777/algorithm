@@ -6,13 +6,38 @@
 # 목차
 <h2>1. 데이터타입</h2>
 <details>
-  <summary style="font-Weight : bold; font-size : 15px; color : #E43914;" >접기 / 펼치기</summary>
+  <summary style="font-Weight : bold; font-size : 15px;" >접기 / 펼치기</summary>
   <div>  
     JS의 데이터타입에는 기본형과 참조형이 있다. <br>
     변수에 기본형 데이터를 할당할시 별도의 공간에 데이터를 우선 저장한뒤 그 공간의 주솟값을 변수의 값에 할당하게된다.<br>
-    그에 반해 <span style='font-weight: bold;'>참조형 데이터는 여러개의 props들을 모은 그룹</span>이기때문에 props들을 위한 변수 영역을 별도로 확보하고 그 주솟값을 변수에 연결, 그 props들의 식별자를 저장, 각 데이터를 별도의 공간에 저장해 그 주솟값을 식별자들과 매칭시킨다. <br><br>
+    그에 반해 <span style="font-weight: bold;">참조형 데이터는 여러개의 props들을 모은 그룹</span>이기때문에 props들을 위한 변수 영역을 별도로 확보하고 그 주솟값을 변수에 연결, 그 props들의 식별자를 저장, 각 데이터를 별도의 공간에 저장해 그 주솟값을 식별자들과 매칭시킨다. <br><br>
     참조형 데이터를 불변값으로 사용하기위해선, 내부 props들을 일일이 복사해야된다. 이때 필요한게 깊은복사이다.    
   </div>
 </details><br>
+
+<h2>2. 실행컨텍스트</h2>
+<details>
+  <summary style="font-Weight : bold; font-size : 15px;">접기 / 펼치기</summary>
+  <div>  
+    실행 컨텍스트는 실행할 코드에 제공할 환경 정보들을 모아놓은 객체이다.
+    <p>실행 컨텍스트에는 3가지 환경정보들이 담긴다.</p>
+    <p>1. VariableEnvironment</p>
+    <p>2. LexicalEnvironment</p>
+    <p>3. ThisBinding</p>
+
+<p>VariableEnvironment에는 식별자 정보를 수집하는 용도로 쓰인다.
+    LexicalEnvironment에는 각 식별자에 담긴 데이터를 추적하는 용도로 쓰인다. 변수의 값들이 실시간으로 반영된다는 뜻이다.</p>    
+
+   <p>LexicalEnvironment에는 매개변수명, 변수의 식별자, 선언한 함수의 함수명등을 수집하는 environmentRecord와 바로 직전 컨텍스트의 LexicalEnvironment 정보를 참조하는 outerEnvironmentReference로 구성되어있다.</p>
+
+   <p>이 environmentRecord가 하는일을 우리는 바로 호이스팅이라고 말한다.</p>
+   <p>호이스팅은 변수 선언부분과 함수 선언부분을 끌어올리는데, 이때 함수 선언문과 함수 표현식의 차이가 있다. 함수 선언문은 전체를 호이스팅하지만, 함수 표현식은 변수 선언부분만 호이스팅을 하게된다. 이때 함수 선언문은 전역 컨텍스트에서 문제를 일으킬 확률이 높기때문에 되도록 함수 표현식을 사용하는게 좋다.</p>
+
+   <p>outerEnvironmentReference는 현재 컨텍스트와 관련있는 외부 식별자 정보(LexicalEnvironment)를 참조한다. 쉽게말해 점점 멀리있는 스코프를 타고 변수를 찾아나가는 것이다.</p>
+   <p>이 과정을 스코프체인이라고 부른다.</p>
+  </div>
+</details><br>
+
+
 
 
