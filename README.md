@@ -52,6 +52,22 @@
   </div>
 </details><br>
 
+<h2>4. 콜백함수</h2>
+<details>
+  <summary style="font-Weight : bold; font-size : 15px;">접기 / 펼치기</summary>
+  <div>  
+    <p>1. 다른 함수 A의 인자로 콜백함수B를 전달하면 A가 B의 제어권을 갖게된다.</p>
+    <p>2. 특별한 요청(bind)이 없는 한 A에 미리 정해놓은 방식에 따라 B를 호출하게 된다.</p>
+    <p>3. 여기서 미리 정해놓은 방식이란 어떤 시점에서 콜백을 호출할지, 인자에는 어떤 값들을 지정할지, this에 무엇을 바인딩할지 등이다.</p>
+    <p>**이런것들이 forEach나 addEventListener 등에 대해 mdn 문서에 나와있듯이 콜백을 어떤식으로 호출하고, 어떤값을 매개변수로 넘기고 그때 this는 무엇으로 할거다 등등이 정의가 되어있다.</p>
+    
+    arr.forEach(callback(currentvalue[, index[, array]])[, thisArg])
+    
+  <br>
+  [예제](https://github.com/pyeong777/algorithm/blob/main/coreJavaScript/callBack.js)
+  </div>
+</details><br>
+
 
 
 
