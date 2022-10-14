@@ -62,9 +62,8 @@
     <p>**이런것들이 forEach나 addEventListener 등에 대해 mdn 문서에 나와있듯이 콜백을 어떤식으로 호출하고, 어떤값을 매개변수로 넘기고 그때 this는 무엇으로 할거다 등등이 정의가 되어있다.</p>
     
     arr.forEach(callback(currentvalue[, index[, array]])[, thisArg])
-    
-  <br>
-  [예제](https://github.com/pyeong777/algorithm/blob/main/coreJavaScript/callBack.js)
+  
+  
   </div>
 </details><br>
 
