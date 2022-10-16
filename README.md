@@ -67,6 +67,18 @@
   </div>
 </details><br>
 
+<h2>5. 클로저</h2>
+<details>
+  <summary style="font-Weight : bold; font-size : 15px;">접기 / 펼치기</summary>
+  <div>  
+  
+  <p>클로저는 내부함수와 LexicalEnvironment의 조합에서 나타나는 특별한 현상이다.</p><br>
+
+<p>여기서 특별한 현상은 컨텍스트 A에서 선언한 변수a를 참조하는 내부함수 B를 A의 외부로 전달할 경우, A가 종료된 이후에도 변수a가 사라지지 않는 현상을 말한다.</p><br>
+<p>클로저를 통해 함수 종료 후에도 사라지지 않는 지역변수를 만들 수 있다.</p>
+  </div>
+</details><br>
+
 
 
 
